@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: request
+
+  profiles:
+    active: mysql
+
+  config:
+    import: optional:classpath:.env[.properties]

@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:9.4.0
+    container_name: db-it-support-api
+
+    ports:
+      - "3306:3306"
+
+    environment:
+      MYSQL_DATABASE: ${ENV_MYSQL_DATABASE}
+      MYSQL_ROOT_USER: ${ENV_ROOT_USER}
+      MYSQL_ROOT_PASSWORD: ${ENV_ROOT_PASSWORD}
+    volumes:
+      - db-it-support-api:/var/lib/mysql
+
+volumes:
+  db-it-support-api:

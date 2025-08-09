@@ -11,23 +11,37 @@
     <version>1.0.0</version>
   </parent>
 
-  <artifactId>discovery</artifactId>
+  <artifactId>request</artifactId>
   <version>1.0.0</version>
 
-  <name>discovery</name>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-    </dependency>
-  </dependencies>
+  <name>request</name>
 
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+
+      <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
       </plugin>
 
       <plugin>
@@ -36,7 +50,7 @@
         <version>3.4.6</version>
         <configuration>
           <to>
-            <image>discovery-it-support-api</image>
+            <image>request-it-support-api</image>
           </to>
         </configuration>
       </plugin>
