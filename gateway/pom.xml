@@ -36,7 +36,7 @@
         <version>3.4.6</version>
         <configuration>
           <to>
-            <image>gateway-it-support-api</image>
+            <image>gateway-module-it-support</image>
           </to>
         </configuration>
       </plugin>

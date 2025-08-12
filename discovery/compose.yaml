@@ -1,0 +1,12 @@
+services:
+  discovery:
+    image: discovery-module-it-support
+    container_name: discovery-module
+    ports:
+      - "8761:8761"
+    networks:
+      - it-support-network
+
+networks:
+  it-support-network:
+    driver: bridge

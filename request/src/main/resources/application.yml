@@ -5,5 +5,5 @@ spring:
   profiles:
     active: mysql
 
-  config:
-    import: optional:classpath:.env[.properties]
+server:
+  port: 8081

@@ -36,7 +36,7 @@
         <version>3.4.6</version>
         <configuration>
           <to>
-            <image>discovery-it-support-api</image>
+            <image>discovery-module-it-support</image>
           </to>
         </configuration>
       </plugin>
