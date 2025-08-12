@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: user
+
+  profiles:
+    active: mysql
+
+server:
+  port: 8082

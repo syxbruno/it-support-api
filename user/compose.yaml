@@ -29,17 +29,6 @@ services:
     networks:
       - it-support-network
 
-  request:
-    image: request-module-it-support
-    container_name: request-module
-    depends_on:
-      - discovery
-      - db
-    ports:
-      - "8081:8081"
-    networks:
-      - it-support-network
-
   user:
     image: user-module-it-support
     container_name: user-module
